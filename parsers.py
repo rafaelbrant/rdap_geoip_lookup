@@ -15,15 +15,15 @@ class IpsParser:
     def from_txt_file(txt_file: str) -> List[str]:
         """Parses IP addresses from a unstructured .txt file"""
 
-        with open(txt_file, "r") as file:
-            all_ips = []
+        f = open(txt_file, 'r')
+        text = f.read()
+        ips = []
+        # It will return not only valid ips
+        regex = re.findall(r'\b(?:\d{1,3}\.){3}\d{1,3}\b', text)
 
-            # This pattern returns only valid IPs
-            pattern = re.compile(r'((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)')
-            for line in file:
-                ip = pattern.search(line)
-                if ip:
-                    all_ips.append(ip[0])
-        # We will assume that we want to keep repeated ips, otherwise we could just
-        # remove them with list(set(all_ips))
-        return all_ips
+        if regex is not None:
+            for match in regex:
+                if match not in ips:
+                    ips.append(match)
+        print(ips)
+        return ips
