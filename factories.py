@@ -32,5 +32,3 @@ class ServicesInvoker:
             service = ServiceFactory.create_service(service_name, self.ip_list)
             response[service_name] = service.lookup()
         return response
-
-
