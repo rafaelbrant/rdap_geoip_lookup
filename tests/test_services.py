@@ -1,6 +1,5 @@
 import pytest
 
-from clients import AbstractClient
 from services import RDAPIPLookupService, GeoIPLookupService
 
 IP_LIST = ['2.2.2.2', '3.3.3.3', '200.200.200.0']

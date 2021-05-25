@@ -18,7 +18,7 @@ class IpsParser:
         f = open(txt_file, 'r')
         text = f.read()
         ips = []
-        # It will return not only valid ips
+        # It will return not only valid ips. Will return from 0.0.0.0 to 999.999.999.999
         regex = re.findall(r'\b(?:\d{1,3}\.){3}\d{1,3}\b', text)
 
         if regex is not None:
