@@ -25,5 +25,4 @@ class IpsParser:
             for match in regex:
                 if match not in ips:
                     ips.append(match)
-        print(ips)
         return ips
