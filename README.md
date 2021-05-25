@@ -17,15 +17,15 @@ To perform the lookups we must provide the txt file and the services we want to 
 
 To perform RDAP lookup:
 ```
-python3 main.py file.txt --services rdap
+python3 main.py your_file.txt --services rdap
 ```
 To perform a GeoIP lookup:
 ```
-python3 main.py file.txt --services geoip
+python3 main.py your_file.txt --services geoip
 ```
 To perform both lookups:
 ```
-python3 main.py file.txt --services geoip rdap
+python3 main.py your_file.txt --services geoip rdap
 ```
 
 ## Running tests
