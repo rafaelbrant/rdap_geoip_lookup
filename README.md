@@ -1,4 +1,4 @@
-# Python Challenge to perform RDAP and GeoIP Lookups
+# Python project to perform RDAP and GeoIP Lookups
 
 This project will get a unstructured txt file with IPs and perform a lookup operation using The Registration Data Access Protocol - RDAP and GeoIP.
 The results will be saved separately on json files on the project folder. 
